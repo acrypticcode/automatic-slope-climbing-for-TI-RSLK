@@ -1,2 +1,6 @@
-# automatic-slope-climbing-for-TI-RSLK
- TI-RSLK programmable vehicle drives its way to location with local maxima height and stops
+# Automatic Slope Climbing for TI-RSLK
+Author: Curran Flanders
+
+Completion Date: 04/22/2024
+
+Description: TI-RSLK programmable vehicle drives its way to location with local maxima height and stops
