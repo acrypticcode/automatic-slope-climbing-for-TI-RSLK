@@ -1,21 +1,4 @@
-/* ENGR-2350 Lab 5C
 //Nicholas Danas and Curran Flanders
- * 662055547 and 662017081
- *
-// README!!!!!
-// README!!!!!
-// README!!!!!
-//
-// This template project has all initializations required to both control the motors
-// via PWM and measure the speed of the motors. The PWM is configured using a 24 kHz
-// period (1000 counts). The motors are initialized to be DISABLED and in FORWARD mode.
-// The encoders measurements are stored within the variables Tach_R and Tach_L for the
-// right and left motors, respectively. A maximum value for Tach_R and Tach_L is
-// enforced to be 1e6 such that when the wheel stops, a reasonable value for the
-// encoders exists: a very large number that can be assumed to be stopped.
-// Finally, a third timer is added to measure a 100 ms period for control system
-// timing. The variable run_control is set to 1 each period and then reset in the main.
-*/
 
 #include "engr2350_msp432.h"
 
@@ -113,11 +96,7 @@ int main(void)
             calib_flag = 1;
         }
 
-
     }
-
-
-
 
     while(1){
 
@@ -125,7 +104,7 @@ int main(void)
         if(run_control){    // If 100 ms has passed
 
             run_control = 0;    // Reset the 100 ms flag
-            // Control routine ... Explicitly follow pseudocode from Lab document
+            // Control routine
 
 
             acc_ary[0] = acc_ary[1];
@@ -408,20 +387,6 @@ int16_t readAccel_y(void){
     acc_datay = acc_datay + accy[1];
     return acc_datay;
 }
-
-
-
-/*int16_t readAccel_z(void){
-    uint8_t accz[2];
-
-    I2C_readData(EUSCI_B1_BASE, 0x60, 16, accz, 2 );
-
-    acc_dataz = accz[0];
-    acc_dataz = acc_dataz << 8;
-    acc_dataz = acc_dataz + accz[1];
-    return acc_dataz;
-}*/
-
 
 
 void T2_100ms_ISR(){
