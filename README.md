@@ -1,5 +1,5 @@
 # Automatic Slope Climbing for TI-RSLK
-Author: Curran Flanders
+Author: Curran Flanders and Niko Danas
 
 Completion Date: 04/22/2024
 
