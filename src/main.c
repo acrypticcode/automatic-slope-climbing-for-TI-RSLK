@@ -1,5 +1,3 @@
-//Nicholas Danas and Curran Flanders
-
 #include "engr2350_msp432.h"
 
 void GPIOInit();
